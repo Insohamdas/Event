@@ -14,3 +14,4 @@ High-converting, mobile-first luxury landing page for **ORAE Presents Dhamaka '2
 - **Live UPI QR & Screenshot Validation:** Integrated payment desk with instant UPI copying and receipt image preview.
 - **Celebration Confetti Modal:** Instant booking reference and guest confirmation modal.
 - **Fully Responsive & Clean Code:** Built with modern HTML5, Tailwind CSS, and vanilla JavaScript.
+
