@@ -7,10 +7,10 @@
   
   <meta name="description" content="ORAE Presents Dhamaka '26 on 6 November 2026 at Nature Farm Stay, Dwarka Expressway. Experience sprawling open lawns, roaring bonfire, live DJ, gourmet feast and curated bar.">
 
-  <!-- Google Fonts: Anton (Heavy Condensed Display as in reference) + Poppins (Clean Modern UI) -->
+  <!-- Google Fonts: Syne (Ultra-Luxury Festival Display) + Montserrat + Anton + Bebas Neue + Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +36,7 @@
             }
           },
           fontFamily: {
-            display: ['"Bebas Neue"', 'Anton', 'Impact', 'sans-serif'],
+            display: ['"Syne"', '"Montserrat"', '"Bebas Neue"', 'Anton', 'Impact', 'sans-serif'],
             sans: ['Poppins', 'system-ui', 'sans-serif']
           }
         }
@@ -76,38 +76,29 @@
 <body class="bg-brand-sand text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-cyan selection:text-white">
 
   <!-- ========================================================== -->
-  <!-- 1. FLOATING DARK GLASS PILL NAVBAR (Smart Auto-Hide on Scroll) -->
+  <!-- 1. FLOATING DARK GLASS PILL NAVBAR (Left: Brand Name | Right: Book Now) -->
   <!-- ========================================================== -->
-  <div id="main-navbar-container" class="fixed top-5 left-0 right-0 z-50 px-4 pointer-events-none flex justify-center transition-all duration-500 ease-in-out transform translate-y-0 opacity-100">
-    <nav class="w-full max-w-2xl bg-black/70 backdrop-blur-2xl rounded-full shadow-[0_16px_40px_rgba(0,0,0,0.6)] border border-white/15 px-2.5 sm:px-4 py-2 flex items-center justify-between pointer-events-auto transition-all duration-300">
+  <div id="main-navbar-container" class="fixed top-5 left-0 right-0 z-50 px-4 sm:px-6 pointer-events-none flex justify-center transition-all duration-500 ease-in-out transform translate-y-0 opacity-100">
+    <nav class="w-full max-w-3xl bg-black/75 backdrop-blur-2xl rounded-full shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-white/15 px-4 sm:px-6 py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-300">
       
-      <!-- Left Wing: Curated Primary Links -->
-      <div class="flex items-center space-x-1 sm:space-x-2">
-        <a href="#packages" class="text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-cyan-300 hover:bg-white/10 px-3.5 py-1.5 rounded-full transition-colors duration-200">
-          Packages
-        </a>
-        <a href="#experience" class="text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-cyan-300 hover:bg-white/10 px-3.5 py-1.5 rounded-full transition-colors duration-200 hidden sm:inline-block">
-          Experience
-        </a>
-      </div>
-
-      <!-- Center: Elevated Dark Luxury Neon Seal Logo -->
-      <a href="#hero" class="flex flex-col items-center justify-center bg-gradient-to-b from-[#00A3E0] to-[#004B87] text-white px-4 py-2 rounded-2xl shadow-[0_0_25px_rgba(0,163,224,0.5)] border border-cyan-300/40 hover:scale-105 transition-transform duration-200 -my-3 z-20 shrink-0" title="ORAE Presents Dhamaka '26">
-        <span class="font-display text-base sm:text-lg tracking-tight leading-none text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ORAE</span>
-        <span class="text-[7px] sm:text-[8px] font-bold tracking-widest uppercase text-cyan-200 -mt-0.5">DHAMAKA</span>
+      <!-- Left: Brand Name -->
+      <a href="#hero" class="flex items-center gap-2.5 group focus:outline-none" title="ORAE Presents Dhamaka '26">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_12px_#00A3E0] animate-pulse"></span>
+        <div class="flex items-baseline gap-2">
+          <span class="font-display text-base sm:text-lg font-extrabold tracking-wider text-white uppercase group-hover:text-cyan-300 transition-colors">
+            ORAE <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-200">DHAMAKA</span>
+          </span>
+          <span class="text-[10px] font-black tracking-widest text-amber-400 px-1.5 py-0.5 rounded bg-amber-400/10 border border-amber-400/25">
+            '26
+          </span>
+        </div>
       </a>
 
-      <!-- Right Wing: Venue Link + Luxury CTA Pill -->
-      <div class="flex items-center space-x-1 sm:space-x-2">
-        <a href="#venue" class="text-xs font-bold uppercase tracking-wider text-slate-200 hover:text-cyan-300 hover:bg-white/10 px-3.5 py-1.5 rounded-full transition-colors duration-200 hidden sm:inline-block">
-          Venue
-        </a>
-        <a href="#register" class="group bg-gradient-to-r from-amber-300 via-brand-peach to-amber-400 hover:brightness-110 text-slate-950 font-black text-xs px-4 sm:px-5 py-2 rounded-full transition-all duration-200 shadow-[0_0_20px_rgba(236,203,157,0.35)] hover:shadow-[0_0_25px_rgba(236,203,157,0.5)] active:scale-95 flex items-center gap-1.5 shrink-0">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
-          <span>Book Passes</span>
-          <span class="text-xs group-hover:translate-x-0.5 transition-transform duration-200">&rarr;</span>
-        </a>
-      </div>
+      <!-- Right: Book Now CTA Button -->
+      <a href="#register" class="group bg-gradient-to-r from-amber-300 via-brand-peach to-amber-400 hover:brightness-110 text-slate-950 font-black text-xs sm:text-sm px-5 sm:px-6 py-2 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(236,203,157,0.35)] hover:shadow-[0_0_25px_rgba(236,203,157,0.6)] hover:scale-105 active:scale-95 flex items-center gap-1.5 shrink-0">
+        <span>Book Now</span>
+        <span class="text-xs group-hover:translate-x-0.5 transition-transform duration-200">&rarr;</span>
+      </a>
 
     </nav>
   </div>
@@ -132,28 +123,33 @@
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/85"></div>
     </div>
 
-    <div class="max-w-3xl mx-auto text-white mt-2 sm:mt-4">
+    <div class="max-w-4xl mx-auto text-white mt-2 sm:mt-4">
       
-      <!-- Sleek Refined Headline without bulk -->
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide uppercase leading-tight text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)] mb-6 select-none">
-        Perfect Farm <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-400">&</span> Bonfire <br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-sky-300">Party In NCR</span>
+      <!-- Sleek High-End Festival Headline with Syne Display Typography -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[1.06] text-white drop-shadow-[0_10px_35px_rgba(0,0,0,0.95)] mb-6 select-none">
+        <span class="inline-block drop-shadow-[0_2px_15px_rgba(255,255,255,0.25)]">Perfect Farm</span> 
+        <span class="inline-block text-amber-300 font-serif italic font-normal px-1 drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">&</span> 
+        <span class="inline-block drop-shadow-[0_2px_15px_rgba(255,255,255,0.25)]">Bonfire</span>
+        <span class="block mt-1 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-white to-cyan-300 drop-shadow-[0_0_35px_rgba(0,163,224,0.45)]">
+          Party In NCR
+        </span>
       </h1>
 
       <!-- Sleek Action Buttons (No extra text pills) -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-        <a href="#packages" class="bg-gradient-to-r from-amber-300 via-brand-peach to-amber-400 hover:brightness-110 text-slate-950 font-extrabold text-xs sm:text-sm px-7 py-3 rounded-full transition-all duration-300 shadow-[0_8px_25px_rgba(236,203,157,0.35)] hover:scale-105 active:scale-95 flex items-center gap-2">
+        <a href="#packages" class="bg-gradient-to-r from-amber-300 via-brand-peach to-amber-400 hover:brightness-110 text-slate-950 font-black text-xs sm:text-sm px-8 py-3.5 rounded-full transition-all duration-300 shadow-[0_8px_25px_rgba(236,203,157,0.4)] hover:scale-105 active:scale-95 flex items-center gap-2">
           <span>Explore Party Packages</span>
           <span class="text-sm">&rarr;</span>
         </a>
-        <a href="#venue" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full border border-white/25 hover:border-white/40 transition shadow-lg active:scale-95">
+        <a href="#venue" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold text-xs sm:text-sm px-7 py-3.5 rounded-full border border-white/25 hover:border-white/40 transition shadow-lg active:scale-95">
           Venue & Timing Details &darr;
         </a>
       </div>
 
       <!-- Minimal Event Date & Venue Sub-line -->
-      <p class="text-[11px] sm:text-xs text-slate-300/90 font-medium tracking-wider uppercase mt-5 drop-shadow">
-        📍 Friday, 6 November 2026 • 4:00 PM to 11:00 PM • Nature Farm Stay, Dwarka Expressway
+      <p class="text-xs sm:text-sm text-slate-300/90 font-medium tracking-wider uppercase mt-6 drop-shadow flex items-center justify-center gap-1.5">
+        <span class="text-amber-400">📍</span>
+        <span>Friday, 6 November 2026 • 4:00 PM to 11:00 PM • Nature Farm Stay, Dwarka Expressway</span>
       </p>
 
     </div>
