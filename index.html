@@ -74,6 +74,48 @@
     .hero-text-shadow {
       text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.9);
     }
+
+    /* Vivid Multicolor Text Stroke & Gradient for Top Hero Heading */
+    .text-stroke-multicolor {
+      background: linear-gradient(90deg, #00F0FF 0%, #38BDF8 25%, #C084FC 50%, #F43F5E 75%, #FBBF24 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+      filter: drop-shadow(0 0 28px rgba(0, 240, 255, 0.35)) drop-shadow(0 0 40px rgba(244, 63, 94, 0.25));
+    }
+
+    /* Hugeicons ArrowRight02 Path Animation on Hover (animateOnHover animation="path") */
+    .hugeicon-arrow-right-02 {
+      display: inline-block;
+      vertical-align: middle;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hugeicon-arrow-right-02 path {
+      stroke-dasharray: 40;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .hugeicon-arrow-right-02 {
+      transform: translateX(4px);
+    }
+    .group:hover .hugeicon-arrow-right-02 path {
+      animation: arrow02PathMotion 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes arrow02PathMotion {
+      0% {
+        stroke-dashoffset: 40;
+        opacity: 0.6;
+      }
+      50% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
@@ -110,13 +152,31 @@
 
     <div class="relative z-10 max-w-5xl mx-auto text-white mt-4 sm:mt-6 text-center">
       
-      <!-- Headline: Guaranteed Exactly Two Lines -->
-      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.12] mb-5 select-none drop-shadow-[0_8px_32px_rgba(0,0,0,0.95)]">
-        <span class="block whitespace-nowrap">
-          Perfect Farm <span class="text-amber-300 font-serif italic font-normal">&</span> Bonfire
+      <!-- Headline: Guaranteed Exactly Two Lines with Vivid Multicolor Text Stroke & Curved Brush Accent -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.15] mb-6 select-none drop-shadow-[0_8px_32px_rgba(0,0,0,0.95)]">
+        <span class="block whitespace-nowrap [text-shadow:_0_2px_16px_rgba(0,0,0,0.9)]">
+          <span class="text-white drop-shadow-[0_2px_12px_rgba(255,255,255,0.25)]">Perfect Farm</span>
+          <span class="text-amber-300 font-serif italic font-normal px-1 drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">&</span>
+          <span class="text-white drop-shadow-[0_2px_12px_rgba(255,255,255,0.25)]">Bonfire</span>
         </span>
-        <span class="block whitespace-nowrap mt-1 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-amber-200">
-          Party in NCR
+        <span class="relative inline-block mt-1 sm:mt-2">
+          <!-- Main Highlight with Vivid Multicolor Gradient & Crisp Text Stroke -->
+          <span class="block whitespace-nowrap text-stroke-multicolor">
+            Party in NCR
+          </span>
+          <!-- Dynamic Curved Multicolor Brush Stroke Accent -->
+          <svg class="absolute -bottom-2 sm:-bottom-3.5 left-0 right-0 w-full h-2.5 sm:h-3.5 pointer-events-none" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="multiStrokeAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00F0FF"/>
+                <stop offset="25%" stop-color="#38BDF8"/>
+                <stop offset="50%" stop-color="#C084FC"/>
+                <stop offset="75%" stop-color="#F43F5E"/>
+                <stop offset="100%" stop-color="#FBBF24"/>
+              </linearGradient>
+            </defs>
+            <path d="M 3 8 C 80 2, 220 2, 297 7 C 220 11, 80 11, 3 8 Z" fill="url(#multiStrokeAccent)" opacity="0.95"/>
+          </svg>
         </span>
       </h1>
 
@@ -128,20 +188,22 @@
       <!-- Sleek Dual CTA Action Buttons with Luxury Hover Animations -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-7 mb-7">
         
-        <!-- Primary Button: Book Now with Arrow Glide & Light Sheen Hover -->
+        <!-- Primary Button: Book Now with Hugeicons ArrowRight02 Path Animation -->
         <a href="#register" class="group relative overflow-hidden w-full sm:w-auto bg-gradient-to-r from-amber-300 via-brand-peach to-amber-400 hover:brightness-110 text-slate-950 font-bold text-sm px-8 py-3.5 rounded-full transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] active:translate-y-0 flex items-center justify-center gap-2">
           <!-- Light Sweep Sheen -->
           <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none"></span>
           <span class="relative z-10">Book Now</span>
-          <span class="relative z-10 text-sm transition-transform duration-300 ease-out group-hover:translate-x-1.5">&rarr;</span>
+          <!-- Hugeicons ArrowRight02 with animateOnHover animation="path" -->
+          <svg class="relative z-10 w-5 h-5 hugeicon-arrow-right-02 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18.5 12H5m8 6s6-4.419 6-6s-6-6-6-6" />
+          </svg>
         </a>
 
-        <!-- Secondary Button: Explore Packages with Dip Arrow & Frosted Border Illumination -->
-        <a href="#packages" class="group relative overflow-hidden w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white font-medium text-sm px-7 py-3.5 rounded-full border border-white/20 hover:border-white/50 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] active:translate-y-0 flex items-center justify-center gap-1.5">
+        <!-- Secondary Button: Explore Packages with Frosted Border Illumination -->
+        <a href="#packages" class="group relative overflow-hidden w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white font-medium text-sm px-8 py-3.5 rounded-full border border-white/20 hover:border-white/50 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] active:translate-y-0 flex items-center justify-center">
           <!-- Light Sweep Sheen -->
           <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none"></span>
           <span class="relative z-10">Explore Packages</span>
-          <span class="relative z-10 text-xs transition-transform duration-300 ease-out group-hover:translate-y-1">&darr;</span>
         </a>
 
       </div>
@@ -843,15 +905,27 @@
         </div>
       </div>
 
-      <!-- Bottom Copyright & Legal Links (Exact reference footer) -->
-      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-[#2C2C2C] font-medium pt-2 pb-4 gap-2 sm:gap-0">
-        <p>&copy; 2026 Kirshiv Events. All rights reserved.</p>
-        <div class="flex flex-wrap items-center justify-center space-x-2 mt-2 sm:mt-0">
-          <a href="#" class="hover:underline">Privacy Policy</a>
-          <span>|</span>
-          <a href="#" class="hover:underline">Terms & Condition</a>
-          <span>|</span>
-          <a href="https://www.tekpair.store" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-[#172a97] transition">Managed by TekPair Business</a>
+      <!-- Bottom Copyright & Legal Links (Responsive Mobile & Desktop Optimization) -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-[#2C2C2C] font-medium pt-3 pb-6 gap-3 sm:gap-0 text-center sm:text-left">
+        <!-- Copyright (Positioned on the left on desktop, grounded cleanly at bottom on mobile) -->
+        <p class="order-2 sm:order-1 text-[11px] sm:text-xs text-[#555555] sm:text-[#2C2C2C]">
+          &copy; 2026 Kirshiv Events. All rights reserved.
+        </p>
+
+        <!-- Legal & Attribution Links (Single line on desktop, elegant centered 2-line layout on mobile) -->
+        <div class="order-1 sm:order-2 flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-[11px] sm:text-xs">
+          <!-- Policy Links Group (Never breaks or wraps awkwardly on small screens) -->
+          <div class="flex items-center gap-2.5">
+            <a href="#" class="hover:underline hover:text-[#172a97] transition">Privacy Policy</a>
+            <span class="text-[#888888]">|</span>
+            <a href="#" class="hover:underline hover:text-[#172a97] transition">Terms & Condition</a>
+          </div>
+          <!-- Desktop Pipe Separator -->
+          <span class="hidden sm:inline text-[#888888]">|</span>
+          <!-- Attribution Link -->
+          <a href="https://www.tekpair.store" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-[#172a97] transition text-[#333333] sm:text-inherit">
+            Managed by TekPair Business
+          </a>
         </div>
       </div>
 
