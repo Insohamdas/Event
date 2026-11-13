@@ -1,0 +1,21 @@
+{
+  "name": "kirshiv-events-dhamaka26",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production landing page for Kirshiv Events - Dhamaka '26 Farm & Bonfire Party",
+  "type": "module",
+  "scripts": {
+    "dev": "http-server -p 3000 -c-1 .",
+    "start": "http-server -p 3000 .",
+    "preview": "http-server -p 3000 ."
+  },
+  "keywords": [
+    "landing-page",
+    "event",
+    "ticket-booking",
+    "tailwind",
+    "luxury-ui"
+  ],
+  "author": "Kirshiv Events",
+  "license": "UNLICENSED"
+}

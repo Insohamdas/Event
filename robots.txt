@@ -1,0 +1,7 @@
+# robots.txt for Kirshiv Events - Dhamaka '26
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://kirshivevents.com/sitemap.xml
+

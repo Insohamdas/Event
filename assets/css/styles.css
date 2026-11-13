@@ -1,0 +1,63 @@
+/**
+ * Kirshiv Events - Production Stylesheet
+ * Custom UI rules, animations, keyframes, clip-paths and reset styles.
+ */
+
+/* Clean Seamless Scroll (Hide visible scrollbar track & thumb across all modern browsers) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: #000000 !important;
+}
+
+/* Card Gradient */
+.party-card-bg {
+  background: linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 100%);
+}
+
+/* Text Outline Shadow for massive Hero Headline */
+.hero-text-shadow {
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Hugeicons ArrowRight02 Path Animation on Hover (animateOnHover animation="path") */
+.hugeicon-arrow-right-02 {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hugeicon-arrow-right-02 path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .hugeicon-arrow-right-02 {
+  transform: translateX(4px);
+}
+
+.group:hover .hugeicon-arrow-right-02 path {
+  animation: arrow02PathMotion 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes arrow02PathMotion {
+  0% {
+    stroke-dashoffset: 40;
+    opacity: 0.6;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
